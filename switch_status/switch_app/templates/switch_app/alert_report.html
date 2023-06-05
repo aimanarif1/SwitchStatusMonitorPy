@@ -1,0 +1,23 @@
+<h1>Alert Report</h1>
+<table>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Switch</th>
+            <th>Alert Type</th>
+            <th>Alert Time/Date</th>
+            <th>Email Notification Date/Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for switch in unreachable_switches %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ switch.switch_label }}</td>
+                <td>Ping Lost</td>
+                <td>{{ switch.timestamp }}</td>
+                <td>{{ switch.timestamp }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

@@ -1,0 +1,7 @@
+<h1>Switch Status</h1>
+<img src="{{ chart_image }}" alt="Switch Status Chart">
+
+<!-- Display the terminal data as required -->
+{% for terminal in terminals %}
+    <p>{{ terminal.switch_label }} - {{ terminal.t1 }} {{ terminal.t2 }} {{ terminal.t3 }} {{ terminal.t4 }} {{ terminal.t5 }}</p>
+{% endfor %}
